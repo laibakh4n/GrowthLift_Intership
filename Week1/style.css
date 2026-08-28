@@ -35,3 +35,38 @@ img {
   border-radius: 8px;
   max-width: 100%;
 }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.card {
+  background-color: #0a1a0f;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.card h3 {
+  color: #00C864;
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 16px;
+  }
+}
