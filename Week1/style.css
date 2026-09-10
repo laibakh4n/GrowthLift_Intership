@@ -70,3 +70,21 @@ img {
     padding: 16px;
   }
 }
+ .grid-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+ .grid-item {
+  background-color: #0a1a0f;
+  padding: 20px;
+  border-radius: 8px;
+}
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ .grid-item.wide {
+  grid-column: span 2;
+}
+ .grid-item.tall {
+  grid-row: span 2;
+}
