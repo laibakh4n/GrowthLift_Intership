@@ -88,3 +88,47 @@ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
  .grid-item.tall {
   grid-row: span 2;
 }
+
+ nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 16px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav a:hover {
+  color: #050E08;
+  background-color: #00C864;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+ .grid-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,200,100,0.15);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  animation: fadeInUp 0.8s ease forwards;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00C864;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.6); opacity: 0.4; }
+}
