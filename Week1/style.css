@@ -132,3 +132,34 @@ h1 {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(0.6); opacity: 0.4; }
 }
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.tab-btn {
+  background: #0a1a0f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #00C864;
+  color: #050E08;
+}
+
+.tab-content {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
