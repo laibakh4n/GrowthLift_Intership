@@ -48,3 +48,24 @@ tabs.forEach(tab => {
     document.getElementById(tab.dataset.tab).classList.add("active");
   });
 });
+
+fetch("https://api.quotable.io/random")
+  .then(response => response.json())
+  .then(data => console.log(data.content))
+  .catch(error => console.log("Error:", error));
+
+function getQuote() {
+  document.getElementById("quote-text").textContent = "Loading...";
+
+  fetch("https://dummyjson.com/quotes/random")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("quote-text").textContent = data.quote;
+    })
+    .catch(error => {
+      document.getElementById("quote-text").textContent = "Couldn't load quote.";
+    });
+}
+
+getQuote();
+document.getElementById("new-quote").addEventListener("click", getQuote);
