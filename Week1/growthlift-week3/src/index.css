@@ -109,3 +109,8 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+.active-link {
+  color: #00C864;
+  font-weight: bold;
+  border-bottom: 2px solid #00C864;
+}
